@@ -46,3 +46,25 @@ Result
     </div>
 </div>
 ```
+
+## Wraning
+
+Since it's a temporary fix, there are some limitations.
+
+### Do not use a `block` if `+injected` called in mixin.
+
+```jade
+mixin parrent()
+    +injected: block
+```
+
+### Do not use data cycles (hopefully should be fixed soon), this expamle has error
+
+```jade
++parrent()
+    +inject('top')
+        | Text for top position
+    each item in boxes
+        +inject('box')
+            =item
+```
