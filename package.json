@@ -1,6 +1,6 @@
 {
   "name": "jade-injected",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mixins for inject child blocks in parent mixin",
   "main": "./jade-injected.jade",
   "scripts": {

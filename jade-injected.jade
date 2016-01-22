@@ -16,9 +16,15 @@ mixin injected()
 	mixin if(name, index)
 		- var index = index || 0;
 		- var inject = injected[name];
-		if typeof inject == 'function' || typeof inject == 'object'
+		if typeof inject == 'object'
 			if typeof inject[index] == 'function'
 				block
+
+	mixin else(name, index)
+		- var index = index || 0;
+		- var inject = injected[name];
+		if typeof inject != 'object'
+			block
 
 	mixin each(name)
 		- injectedIncrement = 0;

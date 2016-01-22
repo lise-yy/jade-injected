@@ -21,10 +21,15 @@ mixin parrent()
         +if('top')
             .position-top
                 +use('top')
-        .position-boxes
-            +each('box')
-                .position-box
-                    +use('box')
+        +if('box')
+            .position-boxes
+                +each('box')
+                    .position-box
+                        +use('box')
+        +else('box')
+            .position-empty
+                | Box is not inject
+
 ```
 Usage
 ```jade
@@ -45,4 +50,50 @@ Result
         <div class="position-box">Text for second box</div>
     </div>
 </div>
+```
+
+## Wraning
+
+Since it's a temporary fix, there are some limitations.
+
+### Do not use a `block` if `+injected` called in mixin.
+
+```jade
+mixin parrent()
+    +injected: block
+```
+
+### Do not use data cycles (hopefully should be fixed soon)
+```json
+this expamle has error
+```
+```jade
++parrent()
+    +inject('top')
+        | Text for top position
+    each item in boxes
+        +inject('box')
+            =item
+```
+
+
+## Mixins
+
+### Initialization inject into mixin
+```jade
++injected: block
+```
+
+### Use block
+Please, if you call use mixin, check avariable
+```jade
++use(blockName)
+```
+
+### If-Else
+```jade
++if(blockName)
+    +use(blockName)
++else('top')
+
 ```
