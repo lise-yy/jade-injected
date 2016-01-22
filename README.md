@@ -89,7 +89,7 @@ this expamle has error
 ```
 
 ### Use block
-Please, if you call use mixin, check avariable
+Insert block to place. Please, if you call use mixin, check avariable.
 ```jade
 +use(blockName)
 ```
@@ -99,5 +99,22 @@ Please, if you call use mixin, check avariable
 +if(blockName)
     +use(blockName)
 +else('top')
+
+```
+
+### Each
+Each injected blocks
+```jade
++each('box')
+    +use('box')
+
+
+```
+### Inject
+Each injected blocks
+```jade
++parrent
+    +inject('box')
+        | content
 
 ```
