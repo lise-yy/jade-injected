@@ -1,10 +1,21 @@
 {
   "name": "jade-injected",
   "version": "0.0.1",
-  "main": "./jade-injected.jade",
-  "author": "Pavel Yagodin <pavel.yagodin@gmail.com>",
-  "licence": "MIT",
   "description": "Mixins for inject child blocks in parent mixin",
+  "main": "./jade-injected.jade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavel-yagodin/jade-injected.git"
+  },
+  "author": "Pavel Yagodin <pavel.yagodin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavel-yagodin/jade-injected/issues"
+  },
+  "homepage": "https://github.com/pavel-yagodin/jade-injected#readme",
   "keywords": [
     "jade",
     "mixin",
@@ -13,16 +24,7 @@
     "block",
     "multiple"
   ],
-  "homepage": "https://github.com/pavel-yagodin/jade-injected#readme",
-  "bugs": {
-    "url": "https://github.com/pavel-yagodin/jade-injected/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/pavel-yagodin/jade-injected.git"
-  },
   "devDependencies": {
     "jade": "1.9.x"
-  },
-  "engines": { "node": "*" }
+  }
 }
