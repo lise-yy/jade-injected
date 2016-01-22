@@ -58,9 +58,10 @@ mixin parrent()
     +injected: block
 ```
 
-### Do not use data cycles (hopefully should be fixed soon), this expamle has error
+### Do not use data cycles (hopefully should be fixed soon)
 
 ```jade
+//- this expamle has error
 +parrent()
     +inject('top')
         | Text for top position
