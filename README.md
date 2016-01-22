@@ -12,6 +12,10 @@ Include jade file to your project
 ```jade
 include jade-injected/jade-injected
 ```
+
+## NPM
+### https://www.npmjs.com/package/jade-injected
+
 ## Usage
 Mixin
 ```jade
