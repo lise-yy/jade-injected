@@ -98,7 +98,8 @@ Insert block to place. Please, if you call use mixin, check avariable.
 ```jade
 +if(blockName)
     +use(blockName)
-+else('top')
++else(blockName)
+    =blockName + ' is not injected'
 
 ```
 
@@ -111,7 +112,7 @@ Each injected blocks
 
 ```
 ### Inject
-Each injected blocks
+Injected blocks intro parrent mixin
 ```jade
 +parrent
     +inject('box')
