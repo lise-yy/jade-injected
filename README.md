@@ -1,9 +1,9 @@
 # jade-injected
 
-Mixins for inject child blocks in parent mixin. This solution is temporary. I'm really looking forward to the release version 2.x.x jade, which is added support for Multiple Blocks in Mixins. In the meantime, we have to make do with what is.
+These mixins are for injecting child blocks in the parent mixin. Please, mind that this solution is temporary and I'm really looking forward to the Jade's 2.x.x release with a support for Multiple Blocks in Mixins.
 
 
-## Install
+## Installation
 Clone jade-injected to your project
 ```cmd
 git clone git://github.com/pavel-yagodin/jade-injected.git
@@ -56,18 +56,18 @@ Result
 </div>
 ```
 
-## Wraning
+## Warnings
 
 Since it's a temporary fix, there are some limitations.
 
-### Do not use a `block` if `+injected` called in mixin.
+### Do not use a `block` if `+injected` called in mixin
 
 ```jade
 mixin parrent()
     +injected: block
 ```
 
-### Do not use data cycles (hopefully should be fixed soon)
+### Do not use data cycles (hopefully will be fixed soon)
 ```json
 this expamle has error
 ```
@@ -83,13 +83,13 @@ this expamle has error
 
 ## Mixins
 
-### Initialization inject into mixin
+### Initializing the inject into mixin
 ```jade
 +injected: block
 ```
 
 ### Use block
-Insert block to place. Please, if you call use mixin, check avariable.
+Insert the block. Mind that if you call use mixin, you need to check if there is a block.
 ```jade
 +use(blockName)
 ```
@@ -112,7 +112,7 @@ Each injected blocks
 
 ```
 ### Inject
-Injected blocks intro parrent mixin
+Injected blocks into parrent mixin
 ```jade
 +parrent
     +inject('box')
