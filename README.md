@@ -1,2 +1,3 @@
 # jade-injected
-JADE Mixins injected &amp; use blocks
+
+Mixins for inject child blocks in parent mixin
